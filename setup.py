@@ -1,6 +1,6 @@
 from setuptools import setup
-filename = 'lino_algus/setup_info.py'
-exec(compile(open(filename, "rb").read(), filename, 'exec'))
+fn = 'lino_algus/setup_info.py'
+exec(compile(open(fn, "rb").read(), fn, 'exec'))
 
 if __name__ == '__main__':
     setup(**SETUP_INFO)

@@ -4,8 +4,8 @@
 
 SETUP_INFO = dict(
     name='lino-algus',
-    version='0.0.1',
-    install_requires=['lino_xl'],
+    # version='0.0.1',
+    install_requires=['lino-xl'],
     description=("A template for new Lino applications"),
     author='Luc Saffre',
     author_email='luc@lino-framework.org',
@@ -25,13 +25,11 @@ Basic use is as follows:
 - Find a short one-word name for your application, for example "Lino
   Example".
 
-- Fork this repository (to a repository named "example" and owned by
-  you) and then clone your fork to get a local working copy.
+- Download and unzip a snapshot of this repository to a directory
+  named "~/projects/example".
 
-- In your working copy:
-
-  - Rename all files and directories containing "algus" in their name
-    to "example"::
+- In your project directory, rename all files and directories
+  containing "algus" in their name to "example"::
 
        $ git mv lino_algus lino_example
        $ git mv lino_algus/lib/algus lino_example/lib/example
