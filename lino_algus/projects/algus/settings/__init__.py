@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2016 Luc Saffre
+# Copyright 2016-2017 Luc Saffre
 # License: BSD (see file COPYING for details)
 
 """
@@ -28,7 +28,7 @@ class Site(Site):
     version = '0.0.1'
     url = "http://algus.lino-framework.org/"
     demo_fixtures = ['std', 'demo', 'demo2']
-    user_types_module = 'lino_algus.lib.algus.roles'
+    user_types_module = 'lino_algus.lib.algus.user_types'
     migration_class = 'lino_algus.lib.algus.migrate.Migrator'
 
     def get_installed_apps(self):
@@ -45,8 +45,8 @@ class Site(Site):
         yield 'lino_xl.lib.appypod'
 
 
-    def setup_quicklinks(self, ar, tb):
-        super(Site, self).setup_quicklinks(ar, tb)
+    def setup_quicklinks(self, user, tb):
+        super(Site, self).setup_quicklinks(user, tb)
         tb.add_action('lets.Products')
 
 
