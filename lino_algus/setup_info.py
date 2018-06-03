@@ -1,10 +1,10 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2016 Luc Saffre
+# Copyright 2016-2018 Rumma & Ko Ltd
 # License: BSD (see file COPYING for details)
 
 SETUP_INFO = dict(
     name='lino-algus',
-    # version='0.0.1',
+    version='17.10.0',
     install_requires=['lino-xl'],
     description=("A template for new Lino applications"),
     author='Luc Saffre',

@@ -6,7 +6,7 @@
 from django.db import models
 from lino.api import dd
 from lino.utils import join_elems
-from lino.utils.xmlgen.html import E
+from etgen.html import E
 from lino.core.actors import qs2summary
 from lino.utils.mldbc.mixins import BabelNamed
 
@@ -38,8 +38,8 @@ class Product(BabelNamed):
 
 @dd.python_2_unicode_compatible
 class Offer(dd.Model):
-    provider = models.ForeignKey('users.User')
-    product = models.ForeignKey(Product)
+    provider = dd.ForeignKey('users.User')
+    product = dd.ForeignKey(Product)
     valid_until = models.DateField(blank=True, null=True)
 
     def __str__(self):
@@ -48,8 +48,8 @@ class Offer(dd.Model):
 
 @dd.python_2_unicode_compatible
 class Demand(dd.Model):
-    customer = models.ForeignKey('users.User')
-    product = models.ForeignKey(Product)
+    customer = dd.ForeignKey('users.User')
+    product = dd.ForeignKey(Product)
 
     def __str__(self):
         return "%s (%s)" % (self.product, self.customer)
